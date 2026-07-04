@@ -181,7 +181,6 @@ main {
 
 .places-card ul li {
     margin-bottom: 0.75rem;
-    border-bottom: 1px solid var(--border-light);
     padding-bottom: 0.75rem;
 }
 
