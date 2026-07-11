@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Temple Album | WDD 131</title>
+    <meta name="description" content="A responsive photo album showcasing nine The Church of Jesus Christ of Latter-day Saints temples from around the world.">
+    <meta name="author" content="James Nanthuru">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/temples.css">
+    <link rel="stylesheet" href="styles/temples-large.css">
+
+    <script src="scripts/temples.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>Temple Album</h1>
+        <button id="hamburger-btn" aria-label="Toggle navigation menu">☰</button>
+        <nav>
+            <ul id="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">Old</a></li>
+                <li><a href="#">New</a></li>
+                <li><a href="#">Large</a></li>
+                <li><a href="#">Small</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>The Church of Jesus Christ of Latter-day Saints Sacred Temples Around the World</h2>
+
+        <div class="temple-grid">
+            <figure>
+                <img src="images/aba-nigeria-temple.jpg" alt="Aba Nigeria Temple" loading="lazy">
+                <figcaption>Aba Nigeria Temple</figcaption>
+            </figure>
+            <figure>
+                <img src="images/adelaide-australia-temple.jpg" alt="Adelaide Australia Temple" loading="lazy">
+                <figcaption>Adelaide Australia Temple</figcaption>
+            </figure>
+            <figure>
+                <img src="images/albuquerque-new-mexico-temple.jpg" alt="Albuquerque New Mexico Temple" loading="lazy">
+                <figcaption>Albuquerque New Mexico Temple</figcaption>
+            </figure>
+            <figure>
+                <img src="images/arequipa-peru-temple.jpg" alt="Arequipa Peru Temple" loading="lazy">
+                <figcaption>Arequipa Peru Temple</figcaption>
+            </figure>
+            <figure>
+                <img src="images/asunción-paraguay-temple.jpg" alt="Asunción Paraguay Temple" loading="lazy">
+                <figcaption>Asunción Paraguay Temple</figcaption>
+            </figure>
+            <figure>
+                <img src="images/atlanta-georgia-temple.jpg" alt="Atlanta Georgia Temple" loading="lazy">
+                <figcaption>Atlanta Georgia Temple</figcaption>
+            </figure>
+            <figure>
+                <img src="images/barranquilla-colombia-temple.jpg" alt="Barranquilla Colombia Temple" loading="lazy">
+                <figcaption>Barranquilla Colombia Temple</figcaption>
+            </figure>
+            <figure>
+                <img src="images/baton-rouge-louisiana-temple.jpg" alt="Baton Rouge Louisiana Temple" loading="lazy">
+                <figcaption>Baton Rouge Louisiana Temple</figcaption>
+            </figure>
+            <figure>
+                <img src="images/belém-brazil-temple.jpg" alt="Belém Brazil Temple" loading="lazy">
+                <figcaption>Belém Brazil Temple</figcaption>
+            </figure>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentyear"></span> - James Nanthuru - Malawi</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+
+</html>
