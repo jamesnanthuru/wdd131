@@ -189,5 +189,6 @@ footer p:first-child {
 #lastModified {
     font-size: 0.8rem;
     opacity: 1.0;
+    font-style: oblique;
 }
 
