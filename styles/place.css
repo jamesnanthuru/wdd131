@@ -4,6 +4,7 @@
     --glass-border: rgba(200, 170, 130, 0.4);
     --text-color: #3d2b1f;
     --text-light: #fdf6ed;
+    --text-dark: #0d0d1a;
     --shadow-color: rgba(0, 0, 0, 0.2);
     --accent-gold: #d4a373;
     --hover-gold: #b8895c;
@@ -26,7 +27,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 1rem;
+    padding: 0.75rem;
 }
 
 .glass-panel {
@@ -48,15 +49,32 @@ body {
 }
 
 .header-inner {
+    position: relative;
+    overflow: hidden;
     text-align: center;
     color: var(--text-color);
     text-shadow: 0 2px 8px rgba(255, 255, 255, 0.3);
+    z-index: 1;
+}
+
+.header-inner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('../images/sunset-malawi.webp') center/cover no-repeat;
+    filter: blur(6px);
+    -webkit-filter: blur(8px);
+    z-index: -1;
+    border-radius: var(--border-radius);
 }
 
 .site-title {
     font-family: var(--font-heading);
     font-weight: 700;
-    font-size: 2.4rem;
+    font-size: 1.8rem;
     letter-spacing: 1px;
 }
 
@@ -66,9 +84,13 @@ body {
     font-weight: 400;
 }
 
-.hero {
+.main-content {
     width: 100%;
     max-width: 1200px;
+}
+
+.hero {
+    width: 100%;
     margin-bottom: 1.5rem;
     position: relative;
 }
@@ -90,9 +112,9 @@ body {
 
 .hero-overlay {
     position: absolute;
-    top: 2rem;
-    left: 2rem;
-    padding: 1.2rem 2rem;
+    top: 1rem;
+    left: 1rem;
+    padding: 0.8rem 1.2rem;
     background: var(--secondary-glass);
     backdrop-filter: blur(6px);
     -webkit-backdrop-filter: blur(6px);
@@ -105,7 +127,7 @@ body {
 .hero-title {
     font-family: var(--font-heading);
     font-weight: 700;
-    font-size: 1.8rem;
+    font-size: 1.3rem;
     line-height: 1.2;
 }
 
@@ -114,35 +136,17 @@ body {
     opacity: 0.9;
 }
 
-
-.info-section {
-    position: absolute;
-    bottom: 8rem;
-    left: 2rem;
-    max-width: 340px;
-    width: 45%;
-    z-index: 2;
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-}
-
+.info-section,
 .weather-section {
-    position: absolute;
-    bottom: 2rem;
-    right: 2rem;
-    max-width: 340px;
-    width: 45%;
-    z-index: 2;
+    margin: 0.75rem 0;
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
 }
 
-
-.weather-heading,
-.info-heading {
+.section-heading {
     font-family: var(--font-heading);
     font-weight: 600;
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     color: #ffffff;
     margin-bottom: 1rem;
     display: inline-flex;
@@ -150,21 +154,23 @@ body {
     gap: 0.5rem;
     background: rgba(0, 0, 0, 1.0);
     padding: 0.25rem 1rem 0.25rem 1.5rem;
-    margin-left: -1.5rem;          /* spills left by section padding */
+    margin-left: -1.5rem;
     border-radius: 0 var(--border-radius) var(--border-radius) 0;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-.weather-heading::after {
-    content: '';
+.section-heading.weather-heading::after {
+    content: url('../images/weather.svg');
     display: inline-block;
-    width: 2rem;
-    height: 2rem;
-    background: url('../images/weather.svg') center / contain no-repeat;
+    width: 1.8rem;
+    height: 1.8rem;
     margin-left: 0.25rem;
     filter: brightness(0) invert(1);
 }
 
+/* .weather-svg-icon {
+    display: none;
+} */
 
 .weather-grid {
     display: flex;
@@ -185,7 +191,6 @@ body {
     gap: 0.75rem 0;
 }
 
-
 .weather-item,
 .info-item {
     display: flex;
@@ -205,7 +210,6 @@ body {
     font-weight: 600;
     color: var(--text-color);
 }
-
 
 .site-footer {
     width: 100%;
@@ -230,7 +234,61 @@ body {
 
 .footer-copy,
 .footer-modified {
-    color: #0a0a1a;           /* dark, visible */
+    color: #0a0a1a;
     font-weight: 500;
 }
 
+@media (min-width: 40.063rem) {
+    body {
+        padding: 1rem;
+    }
+
+    .site-title {
+        font-size: 2.4rem;
+    }
+
+    .hero {
+        margin-bottom: 1.5rem;
+    }
+
+    .hero-overlay {
+        top: 2rem;
+        left: 2rem;
+        padding: 1.2rem 2rem;
+    }
+
+    .hero-title {
+        font-size: 1.8rem;
+    }
+
+    .info-section {
+        position: absolute;
+        bottom: 8rem;
+        left: 2rem;
+        max-width: 340px;
+        width: 45%;
+        z-index: 2;
+        margin: 0;
+    }
+
+    .weather-section {
+        position: absolute;
+        bottom: 2rem;
+        right: 2rem;
+        max-width: 340px;
+        width: 45%;
+        z-index: 2;
+        margin: 0;
+    }
+
+    .section-heading {
+        font-size: 1.6rem;
+        padding: 0.25rem 1rem 0.25rem 1.5rem;
+        margin-left: -1.5rem;
+    }
+
+    .section-heading.weather-heading::after {
+        width: 2rem;
+        height: 2rem;
+    }
+}

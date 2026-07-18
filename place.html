@@ -9,74 +9,75 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Quicksand:wght@400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles/place-small.css" media="(max-width: 40rem)">
-    <link rel="stylesheet" href="styles/place-large.css" media="(min-width: 40.063rem)">
+    <link rel="stylesheet" href="styles/place.css">
 </head>
 <body>
 
     <header class="site-header" role="banner">
         <div class="header-inner glass-panel">
-            <h1 class="site-title">MALAWI</h1>
+            <h1 class="site-title">Malawi</h1>
             <p class="site-tagline">The Warm Heart of Africa</p>
         </div>
     </header>
 
-    <section class="hero" aria-label="Elephants in Malawi National Park">
-        <div class="hero-image-wrapper">
-            <picture>
-                <source media="(max-width: 480px)" srcset="images/elephants.webp">
-                <source media="(max-width: 768px)" srcset="images/elephants.webp">
-                <source media="(min-width: 769px)" srcset="images/elephants.webp">
-                <img src="images/elephants.webp" alt="Elephants roaming in a Malawian national park" class="hero-image" loading="eager">
-            </picture>
-            
-            <div class="hero-overlay glass-panel">
-    <h2 class="hero-title">Explore Malawi</h2>
-    <p class="hero-sub">Wildlife · Culture · Warmth</p>
-</div>
-
-            <section class="info-section glass-panel" aria-labelledby="info-heading">
-                <h2 id="info-heading" class="section-heading">Data</h2>
-                <dl class="info-grid">
-                    <div class="info-item"><dt>Area:</dt><dd>118,484 km²</dd></div>
-                    <div class="info-item"><dt>Population:</dt><dd>~20.4 million</dd></div>
-                    <div class="info-item"><dt>Capital:</dt><dd>Lilongwe</dd></div>
-                    <div class="info-item"><dt>Languages:</dt><dd>English, Chichewa</dd></div>
-                    <div class="info-item"><dt>Currency:</dt><dd>Malawian Kwacha (MWK)</dd></div>
-                    <div class="info-item"><dt>Time Zone:</dt><dd>UTC+2 (CAT)</dd></div>
-                    <div class="info-item"><dt>Calling Code:</dt><dd>+265</dd></div>
-                    <div class="info-item"><dt>Internet TLD:</dt><dd>.mw</dd></div>
-                </dl>
-            </section>
-
-            <section class="weather-section glass-panel" aria-labelledby="weather-heading">
-                <h2 id="weather-heading" class="section-heading">
-                    <span>Weather</span>
-                    <img src="images/weather.svg" alt="Partly cloudy weather icon" class="weather-svg-icon" width="48" height="48">
-                </h2>
-                <div class="weather-grid">
-                    <dl class="weather-details">
-                        <div class="weather-item">
-                            <dt>Temperature</dt>
-                            <dd id="temperature">14 °C</dd>
-                        </div>
-                        <div class="weather-item">
-                            <dt>Conditions</dt>
-                            <dd id="conditions">Partly Cloudy</dd>
-                        </div>
-                        <div class="weather-item">
-                            <dt>Wind</dt>
-                            <dd id="wind-speed">15 km/h</dd>
-                        </div>
-                        <div class="weather-item">
-                            <dt>Wind Chill</dt>
-                            <dd id="wind-chill"></dd>
-                        </div>
-                    </dl>
+    <main class="main-content">
+        <section class="hero" aria-label="Elephants in Malawi National Park">
+            <div class="hero-image-wrapper">
+                <picture>
+                    <source media="(max-width: 480px)" srcset="images/elephants.webp">
+                    <source media="(max-width: 768px)" srcset="images/elephants.webp">
+                    <source media="(min-width: 769px)" srcset="images/elephants.webp">
+                    <img src="images/elephants.webp" alt="Elephants roaming in a Malawian national park" class="hero-image" loading="eager">
+                </picture>
+                
+                <div class="hero-overlay glass-panel">
+                    <h2 class="hero-title">Explore Malawi</h2>
+                    <p class="hero-sub">Wildlife · Culture · Warmth</p>
                 </div>
-            </section>
-        </div>
-    </section>
+
+                <section class="info-section glass-panel" aria-labelledby="info-heading">
+                    <h2 id="info-heading" class="section-heading">Data</h2>
+                    <dl class="info-grid">
+                        <div class="info-item"><dt>Area:</dt><dd>118,484 km²</dd></div>
+                        <div class="info-item"><dt>Population:</dt><dd>~20.4 million</dd></div>
+                        <div class="info-item"><dt>Capital:</dt><dd>Lilongwe</dd></div>
+                        <div class="info-item"><dt>Languages:</dt><dd>English, Chichewa</dd></div>
+                        <div class="info-item"><dt>Currency:</dt><dd>Malawian Kwacha (MWK)</dd></div>
+                        <div class="info-item"><dt>Time Zone:</dt><dd>UTC+2 (CAT)</dd></div>
+                        <div class="info-item"><dt>Calling Code:</dt><dd>+265</dd></div>
+                        <div class="info-item"><dt>Internet TLD:</dt><dd>.mw</dd></div>
+                    </dl>
+                </section>
+
+                <section class="weather-section glass-panel" aria-labelledby="weather-heading">
+                    <h2 id="weather-heading" class="section-heading">
+                        <span>Weather</span>
+                        <img src="images/weather.svg" alt="Partly cloudy weather icon" class="weather-svg-icon" width="48" height="48">
+                    </h2>
+                    <div class="weather-grid">
+                        <dl class="weather-details">
+                            <div class="weather-item">
+                                <dt>Temperature</dt>
+                                <dd id="temperature">14 °C</dd>
+                            </div>
+                            <div class="weather-item">
+                                <dt>Conditions</dt>
+                                <dd id="conditions">Partly Cloudy</dd>
+                            </div>
+                            <div class="weather-item">
+                                <dt>Wind</dt>
+                                <dd id="wind-speed">15 km/h</dd>
+                            </div>
+                            <div class="weather-item">
+                                <dt>Wind Chill</dt>
+                                <dd id="wind-chill"></dd>
+                            </div>
+                        </dl>
+                    </div>
+                </section>
+            </div>
+        </section>
+    </main>
 
     <footer class="site-footer" role="contentinfo">
         <div class="footer-inner">
