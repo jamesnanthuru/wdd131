@@ -168,9 +168,9 @@ body {
     filter: brightness(0) invert(1);
 }
 
-/* .weather-svg-icon {
+.weather-svg-icon {
     display: none;
-} */
+}
 
 .weather-grid {
     display: flex;
