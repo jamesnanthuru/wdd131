@@ -31,7 +31,12 @@ body {
     margin-bottom: 2rem;
 }
 
-.glass-container h1 {
+/* Header styling */
+header {
+    margin-bottom: 1.5rem;
+}
+
+header h1 {
     color: #ffffff;
     font-weight: 700;
     font-size: 2rem;
@@ -40,9 +45,8 @@ body {
     text-shadow: 0 2px 12px rgba(0, 0, 0, 0.5);
 }
 
-.glass-container p {
+header p {
     color: #d4d4dc;
-    margin-bottom: 1.8rem;
     font-size: 1rem;
     opacity: 0.95;
 }
@@ -93,7 +97,8 @@ textarea::placeholder {
     color: rgba(212, 212, 220, 0.6);
 }
 
-/* Fix for date input */
+/* Date input styling - WebKit pseudo-elements kept for browser compatibility */
+/* Note: These are vendor-specific and only affect WebKit browsers (Chrome, Safari) */
 input[type="date"]::-webkit-calendar-picker-indicator {
     filter: invert(1);
     cursor: pointer;
@@ -262,7 +267,7 @@ footer span {
         padding: 1.8rem 1.2rem;
     }
 
-    .glass-container h1 {
+    header h1 {
         font-size: 1.6rem;
     }
 
