@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review Submitted</title>
+    <link rel="stylesheet" href="styles/form.css">
+</head>
+<body>
+    <main>
+        <div class="glass-container" style="text-align: center;">
+            <h1>✅Thank You!</h1> <!--The emoji is to show up after my user has submitted their rating-->
+            <p>Your review has been submitted successfully.</p>
+            <p id="reviewCount">You have submitted 0 reviews.</p> <!--The review count will be updated by the JavaScrip stored locally-->
+            <a href="form.html" style="color: #f5b301;">Submit another review</a>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; <span id="currentyear"></span> - James Nanthuru - Malawi</p>
+        <p id="lastModified"></p>
+    </footer>
+
+    <script>
+        // localStorage counter logic for review.html
+        document.addEventListener('DOMContentLoaded', () => {
+            // Get current count from localStorage, or start at 0
+            let count = localStorage.getItem('reviewCount');
+            if (count === null) {
+                count = 0;
+            } else {
+                count = parseInt(count);
+            }
+            
+            // Increment by 1
+            count += 1;
+            
+            // Save back to localStorage
+            localStorage.setItem('reviewCount', count);
+            
+            // Display the count
+            const countDisplay = document.getElementById('reviewCount');
+            if (countDisplay) {
+                countDisplay.textContent = `You have submitted ${count} review${count > 1 ? 's' : ''}.`;
+            }
+
+            // Update footer dates (same as form.js)
+            document.getElementById('currentyear').textContent = new Date().getFullYear();
+            document.getElementById('lastModified').textContent = `Last modified: ${document.lastModified}`;
+        });
+    </script>
+</body>
+</html>
