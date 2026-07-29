@@ -487,3 +487,34 @@ footer p:first-child {
         justify-content: center;
     }
 }
+
+/* ===== ADDITIONAL SWATCH BACKGROUND CLASSES ===== */
+.bg-navy {
+    background: #1a1a2e;
+}
+
+.bg-white {
+    background: #ffffff;
+}
+
+.bg-accent {
+    background: #4a6fa5;
+}
+
+.bg-light {
+    background: #e8f0fe;
+}
+
+.bg-soft {
+    background: #d4e4f7;
+}
+
+/* ===== QUICKSAND FONT CLASS ===== */
+.quicksand {
+    font-family: 'Quicksand', sans-serif;
+}
+
+.quicksand h3,
+.quicksand p {
+    font-family: 'Quicksand', sans-serif;
+}
